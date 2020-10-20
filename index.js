@@ -62,23 +62,22 @@ function myResizeFunction () {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 3. Повісити івент на інпут, при зміні стану інпута - виводити повідомленням зі значенням яке зараз є введено.
 */
+let newInput = document.createElement('input');
+main.append(newInput);
+
+newInput.addEventListener('input', inputChangeFunction);
+
+function inputChangeFunction() {
+    console.log(newInput.value);
+}
+
+
+
+
+
 /*
 4. При натисканні на кнопку альт+ о виводити модальне вікно на екран, альт + с - закривати.
 */
