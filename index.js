@@ -21,22 +21,11 @@ hard_string = "Очікую на ввід даних...";
 
 let hard_span = document.createElement('span');
 hard_span.textContent = hard_string;
+hard_span.classList.add('red-text');
 
 let input = document.createElement('input');
 let task2 = document.getElementById('task2');
 main.insertBefore(hard_span, task2)
-
-
-// text_flag = ["Щоб змінити цей напис натисніть Alt+A","Щоб зберегти зміни натисніть Shift+S"];
-// let description = document.createElement('p');
-// for (let i = 0; i < text_flag.length; i++) {
-//     if ( !main.contains(hard_span) ) {
-//         description.textContent = text_flag[i];
-//     } else {
-//         description.textContent = text_flag[i];
-//     }
-// }
-// main.append(description);
 
 
 document.addEventListener('keydown', function(e){
@@ -83,7 +72,9 @@ let task3_descr = "Повісити івент на інпут, при змін�
 description(3, task3_descr);
 
 let newInput = document.createElement('input');
-main.append(newInput);
+let task4 = document.getElementById('task4');
+
+main.insertBefore(newInput, task4);
 
 newInput.addEventListener('input', inputChangeFunction);
 
@@ -93,12 +84,25 @@ function inputChangeFunction() {
 
 
 
-
-
-
 //4
 let task4_descr = "При натисканні на кнопку альт + o виводити модальне вікно на екран, альт + с - закривати."
 description(4, task4_descr);
+
+let my_modal = document.getElementById('my-modal');
+
+document.addEventListener('keydown', function(e) {
+    if (e.code == 'KeyO' && e.altKey) {
+        my_modal.style.display = "block";
+    };
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.code == 'KeyC' && e.altKey) {
+    my_modal.style.display = "none";
+  };
+});
+
+
 
 //5
 let task5_descr = "Створити модальне відкно аналог Алерта але з гарним дизайном. по кліку на кнопку зявляється модальне вікно по центрі екрану(центрування елемента). В модальному вікні має бути текст та кнопка закрити."
