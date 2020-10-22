@@ -60,9 +60,9 @@ window.addEventListener('resize', myResizeFunction);
 
 function myResizeFunction () {
     if (innerWidth < 600) {
-        console.log("Desctop version");
+        console.log("Mobile version");
     } else {
-        console.log("Mobile version")
+        console.log("Desctop version")
     }
 }
 
@@ -88,7 +88,7 @@ function inputChangeFunction() {
 let task4_descr = "При натисканні на кнопку альт + o виводити модальне вікно на екран, альт + с - закривати."
 description(4, task4_descr);
 
-let my_modal = document.getElementById('my-modal');
+let my_modal = document.getElementById('my-modal-4');
 
 document.addEventListener('keydown', function(e) {
     if (e.code == 'KeyO' && e.altKey) {
@@ -107,3 +107,21 @@ document.addEventListener('keydown', function(e) {
 //5
 let task5_descr = "Створити модальне відкно аналог Алерта але з гарним дизайном. по кліку на кнопку зявляється модальне вікно по центрі екрану(центрування елемента). В модальному вікні має бути текст та кнопка закрити."
 description(5, task5_descr);
+
+// let task5 = document.getElementById('task5');
+// let m5 = document.getElementById('m5');
+// main.insertBefore(m5, task5);
+
+let open = document.getElementById('open');
+console.log(open);
+document.getElementById('open').onClick = function() {
+    console.log("hey");
+    alert("hey")
+}
+open.onClick = function() {
+    console.log("hey");
+    alert("hey");
+}
+// open.onClick = function() {
+//     console.log(open);
+// }
