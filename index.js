@@ -108,20 +108,23 @@ document.addEventListener('keydown', function(e) {
 let task5_descr = "Створити модальне відкно аналог Алерта але з гарним дизайном. по кліку на кнопку зявляється модальне вікно по центрі екрану(центрування елемента). В модальному вікні має бути текст та кнопка закрити."
 description(5, task5_descr);
 
-// let task5 = document.getElementById('task5');
-// let m5 = document.getElementById('m5');
-// main.insertBefore(m5, task5);
+let btn = document.createElement('button');
+btn.textContent = "Open";
+btn.id = "open";
+console.log(btn,1);
+main.insertBefore(btn,task6);
 
-let open = document.getElementById('open');
-console.log(open);
-document.getElementById('open').onClick = function() {
+
+let open = document.getElementById("open");
+console.log(open,2);
+open.onclick = function() {
     console.log("hey");
-    alert("hey")
+    let my_modal_5 = document.getElementById('my-modal-5');
+    my_modal_5.style.display = 'block';
 }
-open.onClick = function() {
-    console.log("hey");
-    alert("hey");
+let close = document.getElementById('close');
+close.onclick = function () {
+    console.log("bay");
+    let my_modal_5 = document.getElementById('my-modal-5');
+    my_modal_5.style.display = 'none';
 }
-// open.onClick = function() {
-//     console.log(open);
-// }
